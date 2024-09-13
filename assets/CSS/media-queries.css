@@ -1,0 +1,51 @@
+/* media queries */
+@media (min-width: 800px){
+    .grid-container{
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 800px;
+        align-content: center;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+        grid-row: span 2;
+        min-width: 200px;
+    }
+    .person > .person-info{
+        flex-direction: column;
+        flex: 1;
+        align-items: start;
+    }
+
+    .person > .person-info img{
+        margin-bottom: 2em;
+    }
+
+    .person-info-txt h1{
+        font-size: 2.5em;
+    }
+
+    .person > ul{
+        flex-direction: column;
+        justify-content: center;
+        padding: 1em;
+        gap: 1em;
+    }
+
+    .person > ul li{
+        padding: 0 2em 0 0;
+    }
+
+    section{
+        min-width: 200px;
+    }
+    .section-content > .data{
+        grid-auto-flow: row;
+        gap: .5em;
+        margin-top: 1em;
+    }
+
+    .section-content > .data p:nth-child(1){
+        font-size: 2em;
+    }
+}

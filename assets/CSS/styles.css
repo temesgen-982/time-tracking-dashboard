@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --primary-blue: hsl(246, 80%, 60%);
+    --primary-light-red-work: hsl(15, 100%, 70%);
+    --primary-soft-blue-play: hsl(195, 74%, 62%);
+    --primary-light-red-study: hsl(348, 100%, 68%);
+    --primary-lime-green-exercise: hsl(145, 58%, 55%);
+    --primary-violet-social: hsl(264, 64%, 52%);
+    --primary-soft-orange-self-care: hsl(43, 84%, 65%);
+  
+    --neutral-very-dark-blue: hsl(226, 43%, 10%);
+    --neutral-dark-blue: hsl(235, 46%, 20%);
+    --neutral-lighter-blue: hsl(236, 41%, 34%);
+    --neutral-desaturated-blue: hsl(235, 45%, 61%);
+    --neutral-pale-blue: hsl(236, 100%, 87%);
+    
+    --ff-base: "Rubik", sans-serif;
+
+    --fs-title: 18px;
+
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-500: 500;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1em;
+    font-family: var(--ff-base);
+    font-weight: var(--fw-300);
+    background-color: var(--neutral-very-dark-blue);
+}
+
+.grid-container{
+    display: grid;
+    gap: 2em;
+}
+
+.person{
+    background-color: var(--neutral-dark-blue);
+    border-radius: 1em;
+}
+
+.person > .person-info{
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-blue);
+    border-radius: inherit;
+    padding: 1.5em;
+}
+
+.person > .person-info img{
+    max-width: 70px;
+    margin-right: 1em;
+    background-color: white;
+    padding: .2em;
+    border-radius: 50%;
+}
+
+.person-info-txt > *{
+    color: white;
+    font-weight: var(--fw-300);
+}
+
+.person-info-txt h2{
+    font-size: var(--fs-title);
+    margin-bottom: .3em;
+    color: var(--neutral-pale-blue);
+}
+
+.person-info-txt h1{
+    font-size: 1.5em;
+}
+
+.person > ul{
+    list-style: none;
+    display: flex;
+    gap: 1em;
+    justify-content: space-between;
+}
+
+.person > ul li{
+    color: var(--neutral-pale-blue);
+    cursor: pointer;
+    padding: 1.5em;
+}
+
+.person > ul li.active{
+    color: white;
+}
+
+.person > ul li:hover{
+    color: white;
+}
+
+section{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2em;
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+section > .section-content{
+    position: relative;
+    flex: 1;
+    bottom: 0;
+    padding: 1em;
+    background-color: var(--neutral-dark-blue);
+    color: white;
+    border-radius: inherit;
+    z-index: 1;
+}
+
+section > .section-content:hover{
+    background-color: var(--neutral-lighter-blue);
+}
+
+.section-content > *{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    grid-auto-flow: column;
+    margin-bottom: .5em;
+}
+
+.section-content .section-top h2{
+    font-weight: var(--fw-500);
+    font-size: var(--fs-title);
+}
+
+.section-content .section-top img:hover{
+    color: white; /* this won't obviously work */
+}
+
+.section-content .data p:nth-child(1){
+    font-size: 1.5em;
+}
+
+.section-content .data p:nth-child(2){
+    color: var(--neutral-pale-blue);
+}
+
+section::before{
+    position: absolute;
+    right: 1em;
+    top: -1em;
+    z-index: 0;
+}
+
+/* changing the backgrounds and
+adding the before elements */
+section:nth-of-type(1){
+    background-color: var(--primary-light-red-work);
+}
+
+section:nth-of-type(1)::before{
+    content: url('../images/icon-work.svg');
+}
+
+section:nth-of-type(2){
+    background-color: var(--primary-soft-blue-play);
+}
+
+section:nth-of-type(2)::before{
+    content: url('../images/icon-play.svg');
+}
+
+section:nth-of-type(3){
+    background-color: var(--primary-light-red-study);
+}
+
+section:nth-of-type(3)::before{
+    content: url('../images/icon-study.svg');
+}
+
+section:nth-of-type(4){
+    background-color: var(--primary-lime-green-exercise);
+}
+
+section:nth-of-type(4)::before{
+    content: url('../images/icon-exercise.svg');
+}
+
+section:nth-of-type(5){
+    background-color: var(--primary-violet-social);
+}
+
+section:nth-of-type(5)::before{
+    content: url('../images/icon-social.svg');
+}
+
+section:nth-of-type(6){
+    background-color: var(--primary-soft-orange-self-care);
+}
+
+section:nth-of-type(6)::before{
+    content: url('../images/icon-self-care.svg');
+}
+
+
+footer{ 
+    font-size: 11px; 
+    text-align: center;
+    color: white;
+}
+
+footer a{ 
+    color: white;
+}
